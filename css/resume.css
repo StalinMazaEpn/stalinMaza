@@ -1,13 +1,13 @@
-/*!
- * Start Bootstrap - Resume v5.0.2 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
-
+/* 
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
   color: #868e96;
+} */
+
+body {
+  font-family: Arial;
+  color: #333333;
 }
 
 @media (min-width: 992px) {
@@ -17,7 +17,7 @@ body {
   }
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -27,7 +27,7 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: #343a40;
-}
+} */
 
 h1 {
   font-size: 6rem;
@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: #4099ff;
 }
 
 .dev-icons {
@@ -80,7 +80,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #4099ff;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -176,7 +176,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: #263544 !important;
 }
 
 .text-primary {
@@ -184,9 +184,19 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-  color: #BD5D38;
+  color: #37474f;
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+ color: #4099ff;
 }
+
+.main_content{
+  background: #fefefe;
+}
+
+.pd_6{
+  padding-bottom: 6em;
+}
+
+/*https://colorlib.com/polygon/gentelella/index.html*/
