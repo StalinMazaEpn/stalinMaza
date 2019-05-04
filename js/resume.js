@@ -38,3 +38,15 @@ function load_page() {
 
 }
 window.onload = load_page;
+
+
+//Registrar Service Worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("./sw.js")
+        .then(reg => {
+            console.log("Registro de Service Worker Exitoso", reg);
+        })
+        .catch(err => {
+            console.warn("Error al registrar el Service Worker", err);
+        });
+}
