@@ -8,6 +8,10 @@ body {
 }
 
 @media (min-width: 992px) {
+    body.preload_activate {
+        padding-top: 0;
+        padding-left: 0rem;
+    }
     body {
         padding-top: 0;
         padding-left: 17rem;

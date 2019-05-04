@@ -35,6 +35,7 @@ const contenido_pagina = document.getElementById("main_content");
 function load_page() {
     preloader.classList.add("ocultar");
     contenido_pagina.classList.remove("ocultar");
+    document.body.classList.remove("preload_activate");
 
 }
 window.onload = load_page;
