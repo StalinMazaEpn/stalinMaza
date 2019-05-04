@@ -11,7 +11,7 @@ const CACHE_NAME = 'v1_cache_stalin_maza_landingpage',
         './vendor/bootstrap.js',
         './vendor/jquery.easing.min.js',
         './js/resume.js',
-        './img_favicon/favicon.png'
+        './img_app/favicon.png'
     ]
 
 
