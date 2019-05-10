@@ -38,7 +38,10 @@ function load_page() {
     document.body.classList.remove("preload_activate");
 
 }
-window.onload = load_page;
+
+document.addEventListener('DOMContentLoaded', function(e){
+    load_page();
+});
 
 //Registrar Service Worker
 if ('serviceWorker' in navigator) {
