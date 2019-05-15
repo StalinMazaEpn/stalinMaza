@@ -11,7 +11,10 @@ const CACHE_NAME = 'v1_cache_stalin_maza_landingpage',
         './vendor/bootstrap.js',
         './vendor/jquery.easing.min.js',
         './js/resume.js',
-        './img_app/favicon.png'
+        './img_app/favicon.png',
+        "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
+        "https://unpkg.com/axios/dist/axios.min.js",
+        "./js/leerEnv.js"
     ]
 
 

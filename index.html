@@ -17,8 +17,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="shortcut icon" type="image/png" href="./img_app/StalinLogo.png">
     <link rel="apple-touch-icon" href="./img_app/StalinLogo.png">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="apple-touch-startup-image" href="./img_app/StalinLogo.png">
     <link rel="manifest" href="./manifest.json">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap.css" rel="stylesheet">
@@ -93,27 +96,18 @@
                     <a href="mailto:stalin_ct97@hotmai.com">stalin_ct97@hotmail.com</a>
                 </div> -->
                     <p class="lead mb-3">Quito, Ecuador <a
-                            href="mailto:stalin_ct97@hotmai.com">stalin_ct97@hotmail.com</a>
+                            href="mailto:stalin_ct97@hotmail.com">stalin_ct97@hotmail.com</a>
                     </p>
                     <p class="lead mb-3">Programador Web con Conocimientos en HTML, CSS, JavaScript, PHP y MySQL. Estoy
                         cursando la tecnología en Análisis de Sistemas Informáticos en la Escuela Politécnica Nacional.
                     </p>
                     <p class="lead mb-5">Puedes ver mi CV: <a target="_blank"
                             href="https://stalinmazaepn.github.io/StalinMazaEpn/docs/cv_stalin.pdf">aquí</a></p>
-
-                    <div class="social-icons">
-                        <a target="_blank" href="https://www.linkedin.com/in/stalinmaza131197">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a target="_blank" href="https://github.com/StalinMazaEpn">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a target="_blank" href="https://www.twitter.com/stalinct97">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a target="_blank" href="https://www.facebook.com/stalinmaza97">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                   
+                    <div class="social-icons" id="iconosSocialesComponent">
+                        <a target="_blank" v-bind:href="icon.url" v-for="icon in iconosSociales">
+                            <i v-bind:class="icon.icon_class"></i>
+                          </a>
                     </div>
                 </div>
             </section>
@@ -504,6 +498,8 @@
     <script src="./vendor/bootstrap.js"></script>
     <!-- Plugin JavaScript -->
     <script src="./vendor/jquery.easing.min.js"></script>
+    <!-- Extensiones -->
+    <script src="./js/leerEnv.js"></script>
     <!-- Custom scripts for this template -->
     <script src="./js/resume.js"></script>
 </body>
