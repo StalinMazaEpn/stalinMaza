@@ -1,6 +1,6 @@
-# Landing Page Template
+# Stalin Maza Landing Page
 
-### This Template has Free License and was made with the Framework CSS Bootstrap 4
+### Template por Boostrap 4
 
 Stalin Maza <a target="_blank" href="https://stalinmazaepn.github.io/stalinMaza/">CV</a>
 
