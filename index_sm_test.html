@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <link rel="shortcut icon" href="./img_app/StalinLogo.png" type="image/x-icon">
+    <title>Stalin Maza</title>
+    
+    <!-- METAETIQUETAS PERSONALIZADAS -->
+    <meta name="theme-color" content="#20262e">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="./img_app/StalinLogo.png">
+    <link rel="apple-touch-icon" href="./img_app/StalinLogo.png">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="apple-touch-startup-image" href="./img_app/StalinLogo.png">
+    <link rel="manifest" href="./manifest.json">
+    <!-- METAETIQUETAS -->
+    <meta name="description" content="Mi Página Web Personal para mostrar mi trabajo y experiencia como desarrollador web">
+    <meta name="author" content="Stalin Maza">
+    <!-- FACEBOOK OPENGRAPH -->
+    <meta property='og:locale' content='es_ES'/>   
+    <meta property='og:type' content='article'/>
+    <meta property='og:site_name' content='Stalin Maza CV'/>  
+    <meta property="og:url" content="https://stalinmazaepn.github.io/stalinMaza/" />
+    <meta property="og:description" content="Mi Página Web Personal para mostrar mi trabajo y experiencia como desarrollador web" />
+    <meta property="og:image" content="https://stalinmazaepn.github.io/stalinMaza/img_app/icon_1024.png" />
+    <meta property="og:image:secure_url" content="https://stalinmazaepn.github.io/stalinMaza/img_app/icon_1024.png" />
+    <meta property="og:image:alt" content="Imagen Logo de la Landing Page" m/>
+    <meta property="og:title" content="Stalin Maza Landing Page" />
+    <!-- TWITTER CARDS  -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="stalinct97" />
+    <meta name="twitter:creator" content="Stalin Maza" /> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="./vendor/bootstrap.css" rel="stylesheet"> -->
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link href="./css/resume.css" rel="stylesheet"> -->
+</head>
+
+<body id="page-top" class="preload_activate">
+    <!-- PRELOADER DIV -->
+    <div class="contenedor" id="preloader_pagina">
+        <div class="items_preloader">
+            <!--<div id="preloaderfiguras">
+                    </div>-->
+            <div class="preloader_circle"></div>
+        </div>
+
+    </div>
+    <main id="main_content" class="ocultar">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Never expand</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="navbar-collapse collapse" id="navbarsExample01">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </form>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Plugin JavaScript -->
+    <script src="./vendor/jquery.easing.min.js"></script>
+    <!-- Extensiones -->
+    <script src="./js/leerEnv.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="./js/resume.js"></script>
+</body>
+
+</html>

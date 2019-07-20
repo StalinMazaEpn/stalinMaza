@@ -106,7 +106,7 @@ p.lead {
     text-transform: uppercase;
 }
 
-#sideNav .navbar-toggler:focus {
+#sideNav .navbar-toggle:focus {
     outline-color: #d48a6e;
 }
 
