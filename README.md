@@ -11,3 +11,5 @@ Stalin Maza <a target="_blank" href="https://stalinmazaepn.github.io/StalinMazaE
 - HTML5
 - CSS
 - JavaScript
+- Vue JS
+- Axios
