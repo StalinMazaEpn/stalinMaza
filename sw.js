@@ -1,5 +1,5 @@
 //Asignar un nombre y la versión de Cache
-const CACHE_NAME = 'v1_cache_stalin_maza_landingpage',
+const CACHE_NAME = 'v2_cache_stalin_maza_landingpage',
     urlsToCache = [
         './',
         './index.html',
@@ -49,6 +49,14 @@ self.addEventListener('install', e => {
             })
     );
 });
+
+self.addEventListener('message', function (event) {
+    if (event.data.action === 'skipWaiting') {
+      self.skipWaiting();
+    }
+});
+  
+
 
 //una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
 self.addEventListener('activate', e => {
