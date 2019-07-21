@@ -1,12 +1,12 @@
 {
-    "name": "StalinMaza",
-    "short_name": "StalinMaza",
+    "name": "Stalin Maza CV",
+    "short_name": "StalinMazaCV",
     "description": "Bienvenid@s a mi landing page donde podrán conocer en forma resumida parte de mi Curriculum",
     "background_color": "#20262e",
     "theme_color": "#FEFEFE",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "./index.html",
+    "start_url": "./index.html?homescreen=true",
     "scope": ".",
     "lang": "es-EC",
     "icons": [{

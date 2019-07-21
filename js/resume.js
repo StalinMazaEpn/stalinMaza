@@ -47,7 +47,7 @@ document.getElementById('reload_page').addEventListener('click', function () {
 //Registrar Service Worker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js', {
-        scope: './' // <--- THIS BIT IS REQUIRED
+        scope: '.' // <--- THIS BIT IS REQUIRED
     })
         .then(reg => {
             console.log('Registro de SW exitoso', reg);
