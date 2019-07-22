@@ -1,7 +1,47 @@
-// Toggle NavBar
-$('.navbar-nav>li>a').click(function () {
-    console.log('click setup jquery collapse');
-    $('.navbar-collapse').collapse('hide');
+/*
+(function ($) {
+    "use strict";
+     console.log('JQUERY FUNCTIONS');
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: (target.offset().top)
+                }, 1000, "easeInOutExpo");
+                return false;
+            }
+        }
+
+        $('.navbar-nav>li>a').on('click', function(){
+            console.log('Collapse');
+            $('.navbar-collapse').collapse('hide');
+        });
+        $('.sm-item-collapse').on('click', function(){
+            console.log('Collapse item');
+        });
+
+        let menuCollapse = document.querySelector(".navbar-nav>li>a");
+        console.log('menu_collapse', menuCollapse);
+
+        $(function(){ 
+         var navMain = $(".navbar-collapse");
+
+         navMain.on("click", "a", null, function () {
+             console.log("two click a");
+         });
+     });
+    })(jQuery); // End of use strict
+
+});
+*/
+
+ console.log('BEFORE COLLAPSE SETUP');
+$('.sm-item-collapse').click(function () {
+     console.log('click setup jquery collapse');
+     $('.navbar-collapse').collapse('hide');
 });
 // Activate scrollspy to add active class to navbar items on scroll
 $('body').scrollspy({
@@ -18,61 +58,25 @@ function load_page() {
     document.body.classList.remove("preload_activate");
 }
 
-document.addEventListener('DOMContentLoaded', function (e) {
+document.addEventListener('DOMContentLoaded', function(e){
     load_page();
 });
 
-
-
-let newWorker;
-
-
-
-function showUpdateBar() {
-    let toastUpdateNotification = document.getElementById('app_update_avalaible');
-}
-
-showUpdateBar();
-
-// The click event on the pop up notification
-document.getElementById('reload_page').addEventListener('click', function () {
-    newWorker.postMessage({
-        action: 'skipWaiting'
-    });
-});
-// The event listener that is fired when the service worker updates
-// Here we reload the page
-
-
 //Registrar Service Worker
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js', {
-        scope: '.' // <--- THIS BIT IS REQUIRED
-    })
-        .then(reg => {
-            console.log('Registro de SW exitoso', reg);
-            reg.addEventListener('updatefound', () => {
-                // An updated service worker has appeared in reg.installing!
-                newWorker = reg.installing;
-                // Has service worker state changed?
-                switch (newWorker.state) {
-                    case 'installed':
-
-                        // There is a new service worker available, show the notification
-                        if (navigator.serviceWorker.controller) {
-                            showUpdateBar();
-                        }
-
-                        break;
-                }
-            });
-        })
-        .catch(err => console.warn('Error al tratar de registrar el sw', err));
-    
-        let refreshing;
-        navigator.serviceWorker.addEventListener('controllerchange', function () {
-            if (refreshing) return;
-            window.location.reload();
-            refreshing = true;
-          });
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("[PWA Builder] active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("./sw.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+      })
+      .catch(err => {
+      	console.warn('Error al tratar de registrar el sw', err);
+      });
+  }
 }
