@@ -1,6 +1,9 @@
 :root {
     --tamanio-figura: 40px;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial;
@@ -399,3 +402,10 @@ a:active {
       opacity: 1;
     }
   }
+
+
+  @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
