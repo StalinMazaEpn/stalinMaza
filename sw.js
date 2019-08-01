@@ -1,7 +1,5 @@
-importScripts('./js/serviceworker-cache-polyfill.js');
-
 //This is the service worker with the Advanced caching
-const CACHE_VERSION = 3;
+const CACHE_VERSION = 4;
 const CACHE_NAME = 'stalin_maza_offline-v' + CACHE_VERSION;
 const precacheFiles = [
     '/',
@@ -76,10 +74,9 @@ self.addEventListener("install", function (event) {
       console.log("[PWA Builder] Caching pages during install");
 
       return cache.addAll(precacheFiles).then(function () {
-        if (offlineFallbackPage === "index.html") {
+        if (offlineFallbackPage === "./index.html") {
           return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
         }
-
         return cache.add(offlineFallbackPage);
       });
     })
@@ -89,17 +86,29 @@ self.addEventListener("install", function (event) {
 // Allow sw to control of current page
 self.addEventListener("activate", function (event) {
   console.log("[PWA Builder] Claiming clients for current page");
-  event.waitUntil(self.clients.claim());
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+              cacheNames.map(function(cacheName) {
+                if (cacheName.startsWith('pages-cache-') && staticCacheName !== cacheName) {
+                  return caches.delete(cacheName);
+                }
+              })
+            );
+          })
+  );
 });
 
 // If any fetch fails, it will look for the request in the cache and serve it from there first
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
 
-  if (comparePaths(event.request.url, networkFirstPaths)) {
-    networkFirstFetch(event);
-  } else {
-    cacheFirstFetch(event);
+    if (comparePaths(event.request.url, networkFirstPaths)) {
+        networkFirstFetch(event);
+        console.log('networkFirst', event.request.url);
+    } else {
+        cacheFirstFetch(event);
+        console.log('cacheFirst', event.request.url);
   }
 });
 

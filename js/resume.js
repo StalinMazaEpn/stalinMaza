@@ -60,17 +60,21 @@ function load_page() {
 
 document.addEventListener('DOMContentLoaded', function(e){
     load_page();
+        if (document.getElementById('default_link')) {
+            document.getElementById('default_link').classList.add('active'); 
+        }
 });
 
+const registerSW = true;
 //Registrar Service Worker
-if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator && registerSW) {
   if (navigator.serviceWorker.controller) {
     console.log("[PWA Builder] active service worker found, no need to register");
   } else {
     // Register the service worker
     navigator.serviceWorker
       .register("./sw.js", {
-        scope: "./"
+        scope: "/"
       })
       .then(function (reg) {
         console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
