@@ -1,13 +1,14 @@
 :root {
     --tamanio-figura: 40px;
+    --black-cl: #223337;
 }
 html{
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial;
-    color: #333333;
+    color: var(--black-cl);
 }
 
 @media (min-width: 992px) {
@@ -37,7 +38,7 @@ body {
     margin-bottom: .6rem;
 }
 
-h1 {
+h1, .h1 {
     font-size: 6rem;
     line-height: 5.5rem;
 }
@@ -46,15 +47,15 @@ h1 {
     content: "\f83d";
 }
 
-h2 {
+h2, .h2 {
     font-size: 3.5rem;
 }
 
-h3 {
+h3, .h3 {
     font-size: 2rem;
 }
 
-p.lead {
+p.lead, .p {
     font-size: 1.15rem;
     font-weight: 400;
 }
@@ -62,7 +63,7 @@ p.lead {
 .subheading {
     /* text-transform: uppercase; */
     font-weight: 500;
-    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; */
     font-family: Arial;
     font-size: 1.5rem;
 }
@@ -71,7 +72,7 @@ p.lead {
     display: inline-block;
     height: 3.5rem;
     width: 3.5rem;
-    background-color: #495057;
+    background-color: var(--black-cl);
     color: #fff !important;
     border-radius: 100%;
     text-align: center;
@@ -134,7 +135,7 @@ p.lead {
     #sideNav .navbar-brand .img-profile {
         max-width: 10rem;
         max-height: 10rem;
-        border: 0.5rem solid rgba(255, 255, 255, 0.2);
+        border: 0.5rem solid var(--black-cl);
     }
 
     #sideNav .navbar-collapse {
@@ -196,7 +197,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-    background-color: #20262e !important;
+    background-color: var(--black-cl) !important;
 }
 
 .text-primary {
@@ -204,13 +205,17 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-    color: #37474f;
+    color: var(--black-cl);;
 }
 
 a:hover,
 a:focus,
 a:active {
     color: #4099ff;
+}
+
+.container-sm{
+    max-width: 100% !important;
 }
 
 .main_content {
@@ -356,7 +361,7 @@ a:active {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
-    background-color: #333;
+    background-color: var(--black-cl);;
     color: #fff;
     text-align: center;
     border-radius: 2px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +18,7 @@
     <link rel="apple-touch-startup-image" href="./img_app/StalinLogo.png">
     <link rel="manifest" href="./manifest.json?v=1">
     <!-- METAETIQUETAS -->
+    <meta name="keywords" content="stalin maza, desarrollo web, desarrollo móvil">
     <meta name="description"
         content="Mi Página Web Personal para mostrar mi trabajo y experiencia como desarrollador web">
     <meta name="author" content="Stalin Maza">
@@ -27,8 +29,10 @@
     <meta property="og:url" content="https://stalinmazaepn.github.io/stalinMaza/" />
     <meta property="og:description"
         content="Mi Página Web Personal para mostrar mi trabajo y experiencia como desarrollador web" />
-    <meta property="og:image" content="https://stalinmazaepn.github.io/stalinMaza/img_app/icon_1024.png" />
-    <meta property="og:image:secure_url" content="https://stalinmazaepn.github.io/stalinMaza/img_app/icon_1024.png" />
+    <meta property="og:image"
+        content="https://stalinmazaepn.github.io/stalinMaza/img_app/icon_1024.png" />
+    <meta property="og:image:secure_url"
+        content="https://stalinmazaepn.github.io/stalinMaza/img_app/icon_1024.png" />
     <meta property="og:image:alt" content="Imagen Logo de la Landing Page" m />
     <meta property="og:title" content="Stalin Maza Landing Page" />
     <!-- TWITTER CARDS  -->
@@ -37,12 +41,16 @@
     <meta name="twitter:creator" content="Stalin Maza" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.css">
     <link href="./css/resume.css?v=1.1" rel="stylesheet">
 </head>
@@ -55,17 +63,22 @@
         </div>
     </div>
     <div id="app_update_avalaible" class="">Una nueva versión de la App esta disponible. Click <a
-            id="reload_page">aquí</a> para actualizar</div>
+            id="reload_page">aquí</a> para actualizar
+    </div>
     <main id="main_content" class="ocultar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top" itemscope
+                itemtype="http://schema.org/Person">
                 <span class="d-none d-lg-block pt-4 pb-3">
-                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/myProfile.jpg" alt="">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                        src="img/myProfile.jpg" alt="Imagen de Perfil de Stalin Maza"
+                        itemprop="image">
                 </span>
             </a>
             <a class="navbar-brand d-sm-block d-lg-none" href="#about">Stalin Maza</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenuSM"
-                aria-controls="navbarMenuSM" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarMenuSM" aria-controls="navbarMenuSM" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarMenuSM">
@@ -94,33 +107,39 @@
                 </ul>
             </div>
         </nav>
-
-
         <!-- MAIN CONTENT -->
-        <div class="container-fluid p-0 main_content">
+        <div class="container-fluid container-sm main_content">
 
-            <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+            <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" itemscope
+                itemtype="http://schema.org/Person">
                 <div class="my-auto">
-                    <h2 class="mb-3 pb-3 text-center">Sobre Mí
+                    <h2 class="mb-3 pb-3 text-center h2">Sobre Mí
                     </h2>
+                    <h1 class="p">
+                        <span itemprop="name">Stalin Maza</span> -
+                        <span itemprop="jobTitle">Desarrollador Web</span>
+                    </h1>
                     <p class="lead mb-3">
-                        Hola mi nombre es Stalin Maza, soy desarrollador web con experiencia en
-                        lenguajes de backend y frontend y estudio actualmente en la Universidad Politécnica Nacional del
-                        Ecuador donde he desarrollado varios proyectos de aplicaciones y sitios web responsive de alta
+                        Tengo experiencia en lenguajes de backend y frontend y estudio actualmente
+                        en la Universidad Politécnica Nacional del Ecuador donde he desarrollado
+                        varios proyectos de aplicaciones y sitios web responsive de alta
                         calidad.</p>
                     <p class="lead mb-3">
-                        Ser autodidacta como forma para complementar el estudio universirario me ayudó mucho a
-                        fortalecer y emprender de manera correcta el duro pero hermoso camino del desarrollo de
-                        software, una de mis grandes pasiones, la cual busco seguir mejorando cada día por medio del
-                        aprendizaje continuo y estar siempre al tanto de las tecnologías y sus novedades.
+                        Ser autodidacta como forma para complementar el estudio universirario me
+                        ayudó mucho a fortalecer y emprender de manera correcta el duro pero hermoso
+                        camino del desarrollo de software, una de mis grandes pasiones, la cual
+                        busco seguir mejorando cada día por medio del
+                        aprendizaje continuo y estar siempre al tanto de las tecnologías y sus
+                        novedades.
                     </p>
                     <p class="lead mb-3">
                         <span class="mr-3"><i class="fas fa-map-marker-alt"></i></span>
-                        <span>Quito, Ecuador</span>
+                        <span itemprop="addressLocality">Quito, Ecuador</span>
                     </p>
                     <p class="lead mb-3">
                         <span class="mr-3"><i class="far fa-envelope"></i></span>
-                        <a href="mailto:stalin_ct97@hotmail.com">stalin_ct97@hotmail.com</a>
+                        <a href="mailto:stalin_ct97@hotmail.com"
+                            itemprop="email">stalin_ct97@hotmail.com</a>
                     </p>
 
                     <p class="lead mb-5">
@@ -129,7 +148,8 @@
                                 href="./docs/cv_stalin.pdf">aquí</a></span>
                     </p>
                     <div class="social-icons" id="iconosSocialesComponent">
-                        <a target="_blank" v-bind:href="icon.url" v-for="icon in iconosSociales">
+                        <a target="_blank" v-bind:href="icon.url" v-for="icon in iconosSociales"
+                            itemprop="url">
                             <i v-bind:class="icon.icon_class"></i>
                         </a>
                     </div>
@@ -142,14 +162,16 @@
                 <div class="my-auto">
                     <h2 class="mb-5 text-center">Experiencia</h2>
 
-                    <div class="resume-item d-flex flex-column flex-md-row mb-5 animated bounce">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-5 animated bounce"
+                        itemscope itemtype="http://schema.org/Person">
                         <div class="resume-content mr-auto">
-                            <h3 class="mb-0">Desarrollador Web Junior</h3>
+                            <h3 class="mb-0" itemprop="jobTitle">Desarrollador Web</h3>
                             <div class="subheading mb-3">
                                 <span class="mr-2"><i class="fab fa-drupal"></i></span>
                                 <span>Catzo Verde</span>
                             </div>
-                            <p>El Proyecto fue desarrollado usando Drupal como Gestor de Contenido</p>
+                            <p>El Proyecto fue desarrollado usando Drupal como Gestor de Contenido
+                            </p>
                         </div>
                         <div class="resume-date text-md-right">
                             <span class="">Septiembre 2017 - Abril 2018</span>
@@ -198,7 +220,8 @@
                                 <span class="mr-2"><i class="fas fa-graduation-cap"></i></span>
                                 <span>Instituto Tecnológico Superior Central Técnico</span>
                             </h3>
-                            <div class="subheading mb-3">Instalaciones, Equipos y Máquinas Eléctricas</div>
+                            <div class="subheading mb-3">Instalaciones, Equipos y Máquinas
+                                Eléctricas</div>
                             <p>Industriales</p>
                         </div>
                         <div class="resume-date text-md-right">
@@ -214,7 +237,8 @@
             <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
                 <div class="my-auto">
                     <h2 class="mb-5 text-center">Habilidades</h2>
-                    <div class="subheading mb-3">Lenguajes de Programación y Herramientas Manejadas</div>
+                    <div class="subheading mb-3">Lenguajes de Programación y Herramientas Manejadas
+                    </div>
                     <ul class="icons_list dev-icons">
                         <li class="list-inline-item">
                             <img src="img/java.svg" alt="Icono de JAVA" width="60px;">
@@ -292,202 +316,225 @@
                         Desarrollo Ágil usando la Metodología Scrum
                     </li>
                 </ul>
-        </div>
+            </section>
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-            <div class="my-auto">
-                <h2 class="mb-5 text-center">Intereses</h2>
-                <p>Me gusta aprender nuevas cosas y actualmente estoy cursando cursos para profundizar el desarrollo
-                    Backend con PHP y FrontEnd con JavaScript además del desarrollo móvil con IONIC.</p>
-                <p>Las plataformas que he usado para aprender son:</p>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://ed.team/perfil/68283">EDteam</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://platzi.com/@DaniEPN/">Platzi</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.udemy.com/user/jerson-stalin-maza-canar/">Udemy</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://codigofacilito.com/usuarios/stalinct97">Código Facilito</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="proyects">
-            <div class="my-auto">
-                <h2 class="mb-5 text-center">Proyectos</h2>
-                <div class="container_projects">
-                    <ul class="list-unstyled">
-                        <li class="media">
-                            <a href="img_projects/blog_jekyll.png" target="_blank">
-                                <img src="img_projects/blog_jekyll.png" style="width: 140px" class="mr-3"
-                                    alt="Blog en Jelyll">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Blog en Jekyll y Hosting en Github Pages</h5>
-                                <p>Jekyll es un generador de sitios estáticos desarrollado por Tom Preston-Werner usando
-                                    Ruby como lenguaje de Programación</p>
-                            </div>
+            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+                <div class="my-auto">
+                    <h2 class="mb-5 text-center">Intereses</h2>
+                    <p>Me gusta aprender nuevas cosas y actualmente estoy cursando cursos para
+                        profundizar el desarrollo
+                        Backend con PHP y FrontEnd con JavaScript además del desarrollo móvil con
+                        IONIC.</p>
+                    <p>Las plataformas que he usado para aprender son:</p>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://ed.team/perfil/68283"
+                                rel="nofollow">EDteam</a>
                         </li>
-                        <br>
-                        <li class="media my-4">
-                            <a href="img_projects/blog_stalin_master_php.png" target="_blank">
-                                <img src="img_projects/blog_stalin_master_php.png" class="mr-3" style="width: 140px"
-                                    alt="Blog Básico con PHP">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Blog Básico con PHP</h5>
-                                <p>Fue desarrollado con PHP usando la programación estructurada como paradigma</p>
-                            </div>
+                        <li>
+                            <a target="_blank" href="https://platzi.com/@DaniEPN/"
+                                rel="nofollow">Platzi</a>
                         </li>
-                        <br>
-                        <li class="media">
-                            <a href="img_projects/codepen_projects.png" target="_blank">
-                                <img src="img_projects/codepen_projects.png" class="mr-3" style="width: 140px"
-                                    alt="Ejercicios Codepen">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Ejercicios Codepen</h5>
-                                <p>Decenas de ejercicios desarrollados usando HTML, CSS y JS sobre diversos componentes
-                                    o utilidades para proyectos FrontEnd</p>
-                            </div>
+                        <li>
+                            <a target="_blank"
+                                href="https://www.udemy.com/user/jerson-stalin-maza-canar/"
+                                rel="nofollow">Udemy</a>
                         </li>
-                        <br>
-                        <li class="media">
-                            <a href="img_projects/gestor_tareas_master_php.png" target="_blank"> <img
-                                    src="img_projects/gestor_tareas_master_php.png" class="mr-3" style="width: 140px"
-                                    alt="Gestor de Tareas con Symfony"></a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Gestor de Tareas con Symfony 4.2</h5>
-                                <p>Gestor Básico de Tareas desarrollado usando el Framework PHP Symfony en su versión
-                                    4.2</p>
-                            </div>
+                        <li>
+                            <a target="_blank" href="https://codigofacilito.com/usuarios/stalinct97"
+                                rel="nofollow">Código Facilito</a>
                         </li>
-                        <br>
-                        <li class="media">
-                            <a href="img_projects/gymgalaxy.png" target="_blank">
-                                <img src="img_projects/gymgalaxy.png" class="mr-3" style="width: 140px" alt="GymGalaxy">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">GymGalaxy</h5>
-                                <p>Sitio para administración básica de un Gimnasio desarrollado con PHP y Ajax</p>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="media">
-                            <a href="img_projects/laragram_master_php.png" target="_blank">
-                                <img src="img_projects/laragram_master_php.png" class="mr-3" style="width: 140px"
-                                    alt="Laragram Laravel 5.7">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Laragram Laravel 5.7</h5>
-                                <p>Sitio Web tipo Instagram para subida de imagenes, poder comentar, dar like, ver tus
-                                    imagenes favoritas y administrar tu perfil de forma básica usando Laravel como
-                                    Framework PHP</p>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="media">
-                            <a href="img_projects/tienda_ropa_master_php.png" target="_blank">
-                                <img src="img_projects/tienda_ropa_master_php.png" class="mr-3" style="width: 140px"
-                                    alt="Tienda Virtual de Ropa">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Tienda Virtual de Ropa - TiendaSM</h5>
-                                <p>Proyecto Básico de una tienda virtual desarrollado con PHP POO que permite la
-                                    administración de los productos, las categorias, un carrito de compras y mucho ,más
-                                </p>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="media">
-                            <a href="img_projects/top_news_master_js.png" target="_blank">
-                                <img src="img_projects/top_news_master_js.png" class="mr-3" style="width: 140px"
-                                    alt="Tienda Virtual de Ropa">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Sitio Básico FrontEnd - TopNews</h5>
-                                <p>Proyecto Básico de un Sitio Web Básico desarrollado con HTML, CSS, JS con JQuery que
-                                    obtiene los posts dinamicamente a partir de un archivo JSON
-                                </p>
-                            </div>
-                        </li>
-                        <br />
-                        <li class="media">
-                            <a href="img_projects/portafolio_proyectos_nodejs_angular.png" target="_blank">
-                                <img src="img_projects/portafolio_proyectos_nodejs_angular.png" class="mr-3"
-                                    style="width: 140px" alt="Portafolio de Proyectos NodeJS, MongoDB, Angular">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Sitio Web para subir proyectos de un Portafolio</h5>
-                                <p>Sitio Web Básico para que se pueda subir los proyectos realizados con una imagen, una
-                                    descripción y una dirección web, hecho con NodeJS en el Servidor y Angular en el
-                                    Cliente
-                                </p>
-                            </div>
-                        </li>
-                        <br />
                     </ul>
                 </div>
-            </div>
+            </section>
 
-        </section>
+            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="proyects">
+                <div class="my-auto">
+                    <h2 class="mb-5 text-center">Proyectos</h2>
+                    <div class="container_projects">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <a href="img_projects/blog_jekyll.png" target="_blank">
+                                    <img src="img_projects/blog_jekyll.png" style="width: 140px"
+                                        class="mr-3" alt="Blog en Jelyll">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Blog en Jekyll y Hosting en Github Pages
+                                    </h5>
+                                    <p>Jekyll es un generador de sitios estáticos desarrollado por
+                                        Tom Preston-Werner usando
+                                        Ruby como lenguaje de Programación</p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media my-4">
+                                <a href="img_projects/blog_stalin_master_php.png" target="_blank">
+                                    <img src="img_projects/blog_stalin_master_php.png" class="mr-3"
+                                        style="width: 140px" alt="Blog Básico con PHP">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Blog Básico con PHP</h5>
+                                    <p>Fue desarrollado con PHP usando la programación estructurada
+                                        como paradigma</p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media">
+                                <a href="img_projects/codepen_projects.png" target="_blank">
+                                    <img src="img_projects/codepen_projects.png" class="mr-3"
+                                        style="width: 140px" alt="Ejercicios Codepen">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Ejercicios Codepen</h5>
+                                    <p>Decenas de ejercicios desarrollados usando HTML, CSS y JS
+                                        sobre diversos componentes
+                                        o utilidades para proyectos FrontEnd</p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media">
+                                <a href="img_projects/gestor_tareas_master_php.png" target="_blank">
+                                    <img src="img_projects/gestor_tareas_master_php.png"
+                                        class="mr-3" style="width: 140px"
+                                        alt="Gestor de Tareas con Symfony"></a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Gestor de Tareas con Symfony 4.2</h5>
+                                    <p>Gestor Básico de Tareas desarrollado usando el Framework PHP
+                                        Symfony en su versión
+                                        4.2</p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media">
+                                <a href="img_projects/gymgalaxy.png" target="_blank">
+                                    <img src="img_projects/gymgalaxy.png" class="mr-3"
+                                        style="width: 140px" alt="GymGalaxy">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">GymGalaxy</h5>
+                                    <p>Sitio para administración básica de un Gimnasio desarrollado
+                                        con PHP y Ajax</p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media">
+                                <a href="img_projects/laragram_master_php.png" target="_blank">
+                                    <img src="img_projects/laragram_master_php.png" class="mr-3"
+                                        style="width: 140px" alt="Laragram Laravel 5.7">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Laragram Laravel 5.7</h5>
+                                    <p>Sitio Web tipo Instagram para subida de imagenes, poder
+                                        comentar, dar like, ver tus
+                                        imagenes favoritas y administrar tu perfil de forma básica
+                                        usando Laravel como
+                                        Framework PHP</p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media">
+                                <a href="img_projects/tienda_ropa_master_php.png" target="_blank">
+                                    <img src="img_projects/tienda_ropa_master_php.png" class="mr-3"
+                                        style="width: 140px" alt="Tienda Virtual de Ropa">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Tienda Virtual de Ropa - TiendaSM</h5>
+                                    <p>Proyecto Básico de una tienda virtual desarrollado con PHP
+                                        POO que permite la
+                                        administración de los productos, las categorias, un carrito
+                                        de compras y mucho ,más
+                                    </p>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="media">
+                                <a href="img_projects/top_news_master_js.png" target="_blank">
+                                    <img src="img_projects/top_news_master_js.png" class="mr-3"
+                                        style="width: 140px" alt="Tienda Virtual de Ropa">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Sitio Básico FrontEnd - TopNews</h5>
+                                    <p>Proyecto Básico de un Sitio Web Básico desarrollado con HTML,
+                                        CSS, JS con JQuery que
+                                        obtiene los posts dinamicamente a partir de un archivo JSON
+                                    </p>
+                                </div>
+                            </li>
+                            <br />
+                            <li class="media">
+                                <a href="img_projects/portafolio_proyectos_nodejs_angular.png"
+                                    target="_blank">
+                                    <img src="img_projects/portafolio_proyectos_nodejs_angular.png"
+                                        class="mr-3" style="width: 140px"
+                                        alt="Portafolio de Proyectos NodeJS, MongoDB, Angular">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Sitio Web para subir proyectos de un
+                                        Portafolio</h5>
+                                    <p>Sitio Web Básico para que se pueda subir los proyectos
+                                        realizados con una imagen, una
+                                        descripción y una dirección web, hecho con NodeJS en el
+                                        Servidor y Angular en el
+                                        Cliente
+                                    </p>
+                                </div>
+                            </li>
+                            <br />
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- <hr class="m-0"> -->
+            </section>
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certificates_awards">
-            <div class="my-auto">
-                <h2 class="mb-5 text-center">Certificados &amp; Reconocimientos</h2>
-                <ul class="fa-ul mb-0">
-                    <li class="certificates_awards-links">
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        Curso Master en PHP por Victor Robles
-                    </li>
-                    <li class="certificates_awards-links">
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        Curso Master en Javascript por Victor Robles
-                    </li>
-                    <li class="certificates_awards-links">
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        Curso Ionic 4 por Fernando Herrera
-                    </li>
-                    <li class="certificates_awards-links">
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        Curso para convertir un template HTML a una WebApp por Fernando Herrera
-                    </li>
-                    <li class="certificates_awards-links">
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        Curso HTML, CSS y JS por Álvaro Felipe
-                    </li>
-                    <li class="certificates_awards-links">
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        Curso de Programaciñon Básica por Freddy Vega
-                    </li>
-                    <!-- <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        1<sup>st</sup>
-                        Place - James Buchanan High School - Hackathon 2006
-                    </li> -->
-                </ul>
-            </div>
-        </section>
+            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certificates_awards">
+                <div class="my-auto">
+                    <h2 class="mb-5 text-center">Certificados</h2>
+                    <ul class="fa-ul mb-0">
+                        <li class="certificates_awards-links">
+                            <i class="fa-li fa fa-trophy text-warning"></i>
+                            Curso Master en PHP por Victor Robles
+                        </li>
+                        <li class="certificates_awards-links">
+                            <i class="fa-li fa fa-trophy text-warning"></i>
+                            Curso Master en Javascript por Victor Robles
+                        </li>
+                        <li class="certificates_awards-links">
+                            <i class="fa-li fa fa-trophy text-warning"></i>
+                            Curso Ionic 4 por Fernando Herrera
+                        </li>
+                        <li class="certificates_awards-links">
+                            <i class="fa-li fa fa-trophy text-warning"></i>
+                            Curso para convertir un template HTML a una WebApp por Fernando Herrera
+                        </li>
+                        <li class="certificates_awards-links">
+                            <i class="fa-li fa fa-trophy text-warning"></i>
+                            Curso HTML, CSS y Javascript por Álvaro Felipe
+                        </li>
+                        <li class="certificates_awards-links">
+                            <i class="fa-li fa fa-trophy text-warning"></i>
+                            Curso de Programación Básica por Freddy Vega
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
+
+        </div>
     </main>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous">
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+        </script>
     <!-- Extensiones -->
     <script src="./js/leerEnv.js"></script>
     <!-- Custom scripts for this template -->

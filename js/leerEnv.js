@@ -1,10 +1,10 @@
 
 
 async function leerDataJSON(url) {
-    let iconos = null;
+    let data = null;
     try {
-        iconos = await axios.get(url); 
-        return iconos;
+        data = await axios.get(url); 
+        return data;
     } catch (err) {
         console.log(err);
     }
@@ -20,6 +20,7 @@ var iconoSocialesComponent = new Vue({
     },
     mounted: async function () {
         const response_icons = await leerDataJSON('./environments/env.json');
+        console.log('Iconos', response_icons);
         this.iconosSociales = response_icons.data.iconos_sociales;
     }
 });
