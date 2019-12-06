@@ -20,7 +20,7 @@ var iconoSocialesComponent = new Vue({
     },
     mounted: async function () {
         const response_icons = await leerDataJSON('./environments/env.json');
-        console.log('Iconos', response_icons);
+        //console.log('Iconos', response_icons);
         this.iconosSociales = response_icons.data.iconos_sociales;
     }
 });
