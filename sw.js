@@ -64,14 +64,14 @@ function comparePaths(requestUrl, pathsArray) {
 }
 
 self.addEventListener("install", function (event) {
-  console.log("[PWA Builder] Install Event processing");
+  //console.log("[PWA Builder] Install Event processing");
 
-  console.log("[PWA Builder] Skip waiting on install");
+  //console.log("[PWA Builder] Skip waiting on install");
   self.skipWaiting();
 
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
-      console.log("[PWA Builder] Caching pages during install");
+      //console.log("[PWA Builder] Caching pages during install");
 
       return cache.addAll(precacheFiles).then(function () {
         if (offlineFallbackPage === "./index.html") {
@@ -85,7 +85,7 @@ self.addEventListener("install", function (event) {
 
 // Allow sw to control of current page
 self.addEventListener("activate", function (event) {
-  console.log("[PWA Builder] Claiming clients for current page");
+  //console.log("[PWA Builder] Claiming clients for current page");
     event.waitUntil(
         caches.keys().then(function(cacheNames) {
             return Promise.all(
@@ -105,10 +105,10 @@ self.addEventListener("fetch", function (event) {
 
     if (comparePaths(event.request.url, networkFirstPaths)) {
         networkFirstFetch(event);
-        console.log('networkFirst', event.request.url);
+        //console.log('networkFirst', event.request.url);
     } else {
         cacheFirstFetch(event);
-        console.log('cacheFirst', event.request.url);
+        //console.log('cacheFirst', event.request.url);
   }
 });
 
@@ -143,7 +143,7 @@ function cacheFirstFetch(event) {
               return;
             }
 
-            console.log("[PWA Builder] Network request failed and no cache." + error);
+            //console.log("[PWA Builder] Network request failed and no cache." + error);
             // Use the precached offline page as fallback
             return caches.open(CACHE_NAME).then(function (cache) {
               cache.match(offlineFallbackPage);
@@ -163,7 +163,7 @@ function networkFirstFetch(event) {
         return response;
       })
       .catch(function (error) {
-        console.log("[PWA Builder] Network request Failed. Serving content from cache: " + error);
+        //console.log("[PWA Builder] Network request Failed. Serving content from cache: " + error);
         return fromCache(event.request);
       })
   );
@@ -195,4 +195,4 @@ function updateCache(request, response) {
 }
 
 
-console.log('WORKER: executing.');
+//console.log('WORKER: executing.');
