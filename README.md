@@ -2,9 +2,9 @@
 
 ### Template por Boostrap 4
 
-Stalin Maza <a target="_blank" href="https://stalinmazaepn.github.io/stalinMaza/">CV</a>
+Stalin Maza <a target="_blank" href="#">CV</a>
 
-Stalin Maza <a target="_blank" href="https://stalinmazaepn.github.io/StalinMazaEpn/">Blog</a>
+Stalin Maza <a target="_blank" href="#">Blog</a>
 
 ## Tecnologías Involucradas
 
